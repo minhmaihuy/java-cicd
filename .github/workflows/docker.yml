@@ -18,7 +18,10 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Build with Maven
+    - name: Grant execute permission for Maven wrapper
+      run: chmod +x ./mvnw
+
+    - name: Build with Maven (Skip all tests)
       run: ./mvnw clean install -Dmaven.test.skip=true
 
     - name: Log in to GitHub Container Registry
