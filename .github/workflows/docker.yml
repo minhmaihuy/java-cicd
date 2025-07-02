@@ -33,7 +33,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        IMAGE=ghcr.io/${{ github.actor }}/java-cicd:latest
+        IMAGE=ghcr.io/${{ github.actor }}/admissions-website:latest
         docker build -t $IMAGE .
         docker push $IMAGE
     # - name: Build and push Docker image
